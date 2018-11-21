@@ -204,5 +204,11 @@ public abstract class OnboarderActivity extends AppCompatActivity implements Vie
         vpOnboarderPager.setCurrentItem(onboarderAdapter.getCount());
     }
 
+
+    protected void showLocationPage() {
+        vpOnboarderPager.setCurrentItem(1);
+    }
+
+
     abstract public void onFinishButtonPressed();
 }

@@ -4,4 +4,8 @@
     <string name="button_finish">Get Started</string>
     <string name="button_next">Next</string>
     <string name="button_skip">Skip</string>
+
+    <string name="dialog_title">Geofencing</string>
+    <string name="dialog_message">We need your location to enable Geofencing. Only when Geolocation is enabled, we can log your time. Geofencing is used to verify that you\'re on Site.</string>
+    <string name="ok">OK</string>
 </resources>
