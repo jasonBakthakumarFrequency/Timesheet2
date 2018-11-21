@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Timesheet</string>
+
+    <string name="button_finish">Get Started</string>
+    <string name="button_next">Next</string>
+    <string name="button_skip">Skip</string>
+</resources>
