@@ -2,6 +2,7 @@ package nz.frequency.timesheet;
 
 import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -58,6 +59,10 @@ public class WelcomeActivity extends OnboarderActivity  {
     public void onFinishButtonPressed() {
         // Define your actions when the user press 'Finish' button
         //Go to the next activity and keep moving on
+        //When the finish button is pressed go to the next activity!! Yay!!
+        Intent intent = new Intent(this,PhoneNumberActivity.class);
+        startActivity(intent);
+        //Doesn't make sense to clear out the activity back stack
     }
 
     @Override
