@@ -2,6 +2,7 @@ package nz.frequency.timesheet
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_phone_number.*
 
 class PhoneNumberActivity : AppCompatActivity() {
 
@@ -10,6 +11,10 @@ class PhoneNumberActivity : AppCompatActivity() {
         setContentView(R.layout.activity_phone_number)
         //set Title to Phone Number
         setTitle(R.string.phone_number)
+
+        nextButton.setOnClickListener {
+            nextButton.startAnimation()
+        }
 
     }
 

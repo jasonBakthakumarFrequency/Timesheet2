@@ -28,11 +28,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="50dp"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             app:counterEnabled="true"
@@ -45,6 +45,26 @@
                 android:hint="@string/phone_number"/>
 
     </android.support.design.widget.TextInputLayout>
+
+
+    <nz.frequency.timesheet.views.CircularProgressButton
+            android:id="@+id/nextButton"
+            android:layout_width="0dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners"
+            app:spinning_bar_width="4dp"
+            app:spinning_bar_color="#FFF"
+            app:spinning_bar_padding="6dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="20dp"/>
 
 
 
