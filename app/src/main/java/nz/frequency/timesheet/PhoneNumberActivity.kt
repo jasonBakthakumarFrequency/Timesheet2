@@ -4,7 +4,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_phone_number.*
 
+
 class PhoneNumberActivity : AppCompatActivity() {
+
+    //Azure functions !! Request and Response the day!! Pretty Solid!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +20,14 @@ class PhoneNumberActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onResume() {
+
+        super.onResume()
+
+
+    }
+
 
 
     override fun onBackPressed() {
