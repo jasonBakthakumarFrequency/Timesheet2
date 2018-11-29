@@ -62,6 +62,7 @@ public class WelcomeActivity extends OnboarderActivity  {
         //When the finish button is pressed go to the next activity!! Yay!!
         Intent intent = new Intent(this,PhoneNumberActivity.class);
         startActivity(intent);
+        finish();
         //Doesn't make sense to clear out the activity back stack
     }
 
@@ -124,6 +125,7 @@ public class WelcomeActivity extends OnboarderActivity  {
 
         }
     }
+
 
     private void showAlertDialog() {
 

@@ -11,7 +11,10 @@
     </string>
     <string name="ok">OK</string>
     <string name="phone_number">Phone Number</string>
-    <string name="phone_number_description"> Please enter your phone number. Remember that you must be already authorised by your employer to use this application. Do not include country code while entering your phone number - Example : 022345678</string>
+    <string name="phone_number_description">Please enter your phone number. Remember that you must be already authorised
+        by your employer to use this application. Do not include country code while entering your phone number - Example
+        : 022345678
+    </string>
     <string name="next">Next</string>
 
 </resources>
