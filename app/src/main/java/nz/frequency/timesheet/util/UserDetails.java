@@ -3,80 +3,77 @@ package nz.frequency.timesheet.util;
 //This one is for GSON Object Parsing
 public class UserDetails {
 
-    String userID;
-    String userName;
-    String phoneNumber;
-    String projectName;
-    String contractorName;
-    String jobName;
-    String jobDescription;
-
-    public UserDetails() {
-    }
+    String UserID;
+    String UserName;
+    String PhoneNumber;
+    String ProjectName;
+    String ContractorName;
+    String JobName;
+    String JobDescription;
 
     public UserDetails(String userID, String userName, String phoneNumber, String projectName, String contractorName, String jobName, String jobDescription) {
-        this.userID = userID;
-        this.userName = userName;
-        this.phoneNumber = phoneNumber;
-        this.projectName = projectName;
-        this.contractorName = contractorName;
-        this.jobName = jobName;
-        this.jobDescription = jobDescription;
+        this.UserID = userID;
+        this.UserName = userName;
+        this.PhoneNumber = phoneNumber;
+        this.ProjectName = projectName;
+        this.ContractorName = contractorName;
+        this.JobName = jobName;
+        this.JobDescription = jobDescription;
     }
 
     public String getUserID() {
-        return userID;
+        return UserID;
     }
 
     public void setUserID(String userID) {
-        this.userID = userID;
+        this.UserID = userID;
     }
 
     public String getUserName() {
-        return userName;
+        return UserName;
     }
 
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.UserName = userName;
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return PhoneNumber;
     }
 
     public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        this.PhoneNumber = phoneNumber;
     }
 
     public String getProjectName() {
-        return projectName;
+        return ProjectName;
     }
 
     public void setProjectName(String projectName) {
-        this.projectName = projectName;
+        this.ProjectName = projectName;
     }
 
     public String getContractorName() {
-        return contractorName;
+        return ContractorName;
     }
 
     public void setContractorName(String contractorName) {
-        this.contractorName = contractorName;
+        this.ContractorName = contractorName;
     }
 
     public String getJobName() {
-        return jobName;
+        return JobName;
     }
 
     public void setJobName(String jobName) {
-        this.jobName = jobName;
+        this.JobName = jobName;
     }
 
     public String getJobDescription() {
-        return jobDescription;
+        return JobDescription;
     }
 
     public void setJobDescription(String jobDescription) {
-        this.jobDescription = jobDescription;
+        this.JobDescription = jobDescription;
     }
 }

@@ -99,9 +99,7 @@ class PhoneNumberActivity : AppCompatActivity() {
 
                     }
                     else -> {
-                        //Hey this seems like this is the right phone number
-                        //val jsonArray = JSONArray(responseString)
-                        //longToast(responseString)
+
                         nextButton.doneLoadingAnimation(Color.WHITE, BitmapFactory.decodeResource(resources, R.drawable.ic_done_name))
                         val sharedPreferences = getSharedPreferences(Constants.SHARED_PREFERENCES_KEY_FOR_THE_APP, Context.MODE_PRIVATE)
                         val editor = sharedPreferences.edit()
