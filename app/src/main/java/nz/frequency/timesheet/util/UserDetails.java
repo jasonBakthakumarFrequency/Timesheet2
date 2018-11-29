@@ -1,5 +1,6 @@
 package nz.frequency.timesheet.util;
 
+//This one is for GSON Object Parsing
 public class UserDetails {
 
     String userID;

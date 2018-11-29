@@ -16,5 +16,9 @@
         : 022345678
     </string>
     <string name="next">Next</string>
+    <string name="send_verification_sms">SEND VERIFICATION SMS</string>
+    <string name="phone_number_verification_prompt">Hey there, just make sure that these details are correct. For user authentication, a SMS with the verification code will be sent to your registered phone number, when you press the button.</string>
+    <string name="hello_person"> Hello User </string>
+    <string name="user_details">User Details</string>
 
 </resources>
