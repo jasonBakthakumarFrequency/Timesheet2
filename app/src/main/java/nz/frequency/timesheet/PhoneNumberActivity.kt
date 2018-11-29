@@ -71,7 +71,7 @@ class PhoneNumberActivity : AppCompatActivity() {
             val response = client.newCall(request).execute()
             uiThread {
 
-                val responseString = response.body()!!.string()
+                val responseString = response.body()?.string()
 
                 when {
                     responseString == "\"This phone number does not exist in our records\"" -> {

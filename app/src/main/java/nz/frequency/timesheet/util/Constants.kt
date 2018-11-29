@@ -12,6 +12,8 @@ class Constants {
         const val PHONE_NUMBER_RESPONSE_DATA = "response_data"
         const val FINISHED_PHONE_NUMBER_ACTIVITY = "phoneNumberActivity"
         const val FINISHED_USER_DETAILS_ACTIVITY = "userDetailsActivity"
+        const val USER_ID = "userID"
+        const val USER_PHONE = "userPhone"
 
     }
 
