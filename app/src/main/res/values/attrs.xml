@@ -9,4 +9,13 @@
         <attr name="finalCornerAngle" format="dimension"/>
 
     </declare-styleable>
+
+    <declare-styleable name="TextLoader">
+        <attr name="funny_prefix" format="string|reference"/>
+        <attr name="funny_postfix" format="string|reference"/>
+        <attr name="funny_animation_duration" format="integer|reference"/>
+    </declare-styleable>
+
+
+
 </resources>

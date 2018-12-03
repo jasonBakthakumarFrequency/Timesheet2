@@ -42,7 +42,6 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
         sendVerificationButton = (Button) findViewById(R.id.button);
         verificationPromptTextView = (TextView) findViewById(R.id.textView5);
 
-
     }
 
     @Override
@@ -75,14 +74,27 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
              detailsRV.setLayoutManager(new LinearLayoutManager(this));
              //Retrofit might not be the best option.
 
+
         }
 
         else{
             detailsRV.setVisibility(View.GONE);
+            sendVerificationButton.setVisibility(View.GONE);
             verificationPromptTextView.setText(R.string.verification_fatal_failure);
             //Cheers we've done the right thing
 
         }
+
+
+
+        sendVerificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserDetailsVerificationActivity.this, PhoneNumberVerificationActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
     }

@@ -17,11 +17,60 @@
     </string>
     <string name="next">Next</string>
     <string name="send_verification_sms">SEND VERIFICATION SMS</string>
-    <string name="phone_number_verification_prompt">Hey there, just make sure that these details are correct. For user authentication, a SMS with the verification code will be sent to your registered phone number, when you press the button.</string>
-    <string name="hello_person"> Hello User </string>
+    <string name="phone_number_verification_prompt">Hey there, just make sure that these details are correct. For user
+        authentication, a SMS with the verification code will be sent to your registered phone number, when you press
+        the button.
+    </string>
+    <string name="hello_person">Hello User</string>
     <string name="user_details">User Details</string>
     <string name="verification_fatal_failure">Hello there! Looks like we\'ve encountered a serious network error. Please
         restart the app and connect it to a stable internet connection.
     </string>
+
+    <string-array name="loading_text">
+        <item>Reticulating Splines</item>
+        <item>Gathering Goblins</item>
+        <item>Lifting Weights</item>
+        <item>Pushing Pixels</item>
+        <item>Formulating Plan</item>
+        <item>Taking Break</item>
+        <item>Herding Ducks</item>
+        <item>Feeding Developers</item>
+        <item>Fishing for Change</item>
+        <item>Searching for Dancers</item>
+        <item>Waking Up Gnomes</item>
+        <item>Playing Chess</item>
+        <item>Building Igloos</item>
+        <item>Converting Celsius</item>
+        <item>Scanning Power Level</item>
+        <item>Delivering Presents</item>
+        <item>Finding Dragon Balls</item>
+        <item>Firing Lasers</item>
+        <item>Party Rocking</item>
+        <item>Walking up to the club</item>
+        <item>Righting wrongs</item>
+        <item>Building Lego</item>
+        <item>Assembling Avengers</item>
+        <item>Turning Down for What</item>
+        <item>Reaching 88mph</item>
+        <item>Pondering Existence</item>
+        <item>Battling Robots</item>
+        <item>Smashing Pots</item>
+        <item>Stomping Goombas</item>
+        <item>Doing Donuts</item>
+        <item>Entering Danger Zone</item>
+        <item>Talking to Mom</item>
+        <item>Chasing Squirrels</item>
+        <item>Setting Phasers to Stun</item>
+        <item>Doing Macarena</item>
+        <item>Dropping Bass</item>
+        <item>Removing Biebers</item>
+        <item>Performing Magic</item>
+    </string-array>
+
+    <string name="hang_in_there_text">Hello ! Just hang in there. We will send an SMS to your registered mobile number with the Verification Code. The app will automatically recognise it and move on to your home page. Your patience is appreciated. </string>
+    <string name="verification">Verification</string>
+    <string name="fatal_error"> A fatal network error seems to have occurred. Please clear all of the app data or re install the app and please ensure that you have a stable internet connection while signing into the app for the first time.</string>
+
 
 </resources>

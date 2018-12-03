@@ -14,6 +14,11 @@ class Constants {
         const val FINISHED_USER_DETAILS_ACTIVITY = "userDetailsActivity"
         const val USER_ID = "userID"
         const val USER_PHONE = "userPhone"
+        const val GENERATE_JWT_API_ADDRESS = "https://frequencytimesheetfunctions.azurewebsites.net/api/generateJWTTokenForTwilioVerification"
+        const val GENERATE_WEB_TOKEN_PARAM_1 = "code"
+        const val GENERATE_WEB_TOKEN_PARAM_2 = "phonenumber"
+        const val GENERATE_WEB_TOKEN_ACCESS_CODE = "VyWAa62iWiPr7o3T1iKu4FDPsf6lKsVmdHb6fmA5yGX8IWDE36F3Cw=="
+
 
     }
 

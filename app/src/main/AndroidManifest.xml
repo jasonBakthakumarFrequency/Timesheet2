@@ -29,6 +29,11 @@
                 android:screenOrientation="portrait"/>
         <activity android:name=".UserDetailsVerificationActivity">
         </activity>
+        <activity android:name=".PhoneNumberVerificationActivity"
+        android:screenOrientation="portrait"/>
+
+
+
     </application>
 
 </manifest>

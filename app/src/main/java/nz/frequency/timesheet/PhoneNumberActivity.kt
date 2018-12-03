@@ -125,7 +125,7 @@ class PhoneNumberActivity : AppCompatActivity() {
         mainActivity.addCategory(Intent.CATEGORY_HOME)
         mainActivity.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(mainActivity)
-        //TODO: Configure your back press. Make them go straight to the home page. And also handle if they hit the back button while it is loading!! Cheers...
+
 
     }
 
