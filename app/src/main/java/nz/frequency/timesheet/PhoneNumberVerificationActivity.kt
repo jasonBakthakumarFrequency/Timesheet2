@@ -23,12 +23,10 @@ class PhoneNumberVerificationActivity : AppCompatActivity() {
             //The phone number is not present a fatal error has occurred.
             progressBar.visibility = View.INVISIBLE
             loadingTextView.setText(R.string.fatal_error)
-            //Shifting over from Twilio to Sinch because of easier integration. Quite useful and also better integration.
-
         }
         else{
 
-            //Using Sinch from Now
+            //TODO: Ask for SMS Permission in the previous activity and also create SMS Commit request..
 
         }
 

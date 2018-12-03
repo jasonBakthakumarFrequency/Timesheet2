@@ -1,8 +1,15 @@
 package nz.frequency.timesheet;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,6 +17,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import nz.frequency.timesheet.util.Constants;
@@ -30,6 +38,8 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
     TextView helloUserTextView;
     Button sendVerificationButton;
     TextView verificationPromptTextView;
+    public static final int MY_PERMISSIONS_REQUEST_RECEIVE_SMS = 5;
+    public static final int MY_PERMISSIONS_REQUEST_READ_SMS = 3;
 
 
     @Override
@@ -90,15 +100,64 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
         sendVerificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(UserDetailsVerificationActivity.this, PhoneNumberVerificationActivity.class);
-                startActivity(intent);
-                finish();
+                checkForSMSPermission();
+
             }
         });
 
 
     }
 
+    private void checkForSMSPermission() {
+
+
+        if (ContextCompat.checkSelfPermission(UserDetailsVerificationActivity.this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(UserDetailsVerificationActivity.this, Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED){
+            //This is where we don't have the permission and show rationale before jumping the gun.
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(R.string.sms_description_dialog)
+                    .setTitle(R.string.sms_title_dialog);
+            // Add the buttons
+            builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // User clicked OK button
+                    //Check if the permission is already granted
+                    if (ContextCompat.checkSelfPermission(UserDetailsVerificationActivity.this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED || ContextCompat.checkSelfPermission(UserDetailsVerificationActivity.this, Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED) {
+                        // Permission is not granted
+                        // Should we show an explanation?
+                        if (ActivityCompat.shouldShowRequestPermissionRationale(UserDetailsVerificationActivity.this,
+                                Manifest.permission.READ_SMS)) {
+
+                            ActivityCompat.requestPermissions(UserDetailsVerificationActivity.this,
+                                    new String[]{Manifest.permission.READ_SMS, Manifest.permission.RECEIVE_SMS},
+                                    MY_PERMISSIONS_REQUEST_READ_SMS);
+                        } else {
+                            // No explanation needed; request the permission
+                            ActivityCompat.requestPermissions(UserDetailsVerificationActivity.this,
+                                    new String[]{Manifest.permission.READ_SMS, Manifest.permission.RECEIVE_SMS},
+                                    MY_PERMISSIONS_REQUEST_READ_SMS);
+                            // MY_PERMISSIONS_REQUEST_FINE_LOCATION is an
+                            // app-defined int constant. The callback method gets the
+                            // result of the request.
+                        }
+                    }  //Else the permission has been granted. Do nothing! :)
+                }
+            });
+            // Create the AlertDialog
+            AlertDialog dialog = builder.create();
+            dialog.show();
+
+        }
+
+        else{
+            //We've got the permission already. Probably because people using an older phone (with API lower than 24). So just take it for granted and move on to the next activity
+            Intent intent = new Intent(UserDetailsVerificationActivity.this, PhoneNumberVerificationActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+
+    }
 
 
     //The method that parses the obtained user list and create a much better UI experience
@@ -120,7 +179,6 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
             theListOfObjects.add(new UserDetailsRVContent(project));
         }
 
-
         //Actually commenting code makes things better
         theListOfObjects.add("Contractor");
         //Getting the content.
@@ -136,6 +194,22 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
 
         return theListOfObjects;
     }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[], @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_SMS: {
+                // If request is cancelled, the result arrays are empty.
+                Intent intent = new Intent(UserDetailsVerificationActivity.this, PhoneNumberVerificationActivity.class);
+                startActivity(intent);
+                finish();
+            }
+
+        }
+    }
+
 
 
 

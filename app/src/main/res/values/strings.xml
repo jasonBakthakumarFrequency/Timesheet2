@@ -71,6 +71,7 @@
     <string name="hang_in_there_text">Hello ! Just hang in there. We will send an SMS to your registered mobile number with the Verification Code. The app will automatically recognise it and move on to your home page. Your patience is appreciated. </string>
     <string name="verification">Verification</string>
     <string name="fatal_error"> A fatal network error seems to have occurred. Please clear all of the app data or re install the app and please ensure that you have a stable internet connection while signing into the app for the first time.</string>
-
+    <string name="sms_title_dialog">Permission</string>
+    <string name="sms_description_dialog">In order to verify your phone number automatically we need your permission to receive and read the verification SMS that will be sent to you. Please press OK to navigate to the permissions dialog.</string>
 
 </resources>
