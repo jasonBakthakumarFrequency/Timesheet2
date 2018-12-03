@@ -28,7 +28,6 @@ class PhoneNumberActivity : AppCompatActivity() {
         setTitle(R.string.phone_number)
 
 
-
     }
 
     override fun onResume() {
@@ -44,8 +43,7 @@ class PhoneNumberActivity : AppCompatActivity() {
             else {
                 phoneNumberTextLayout.isErrorEnabled = false
                 nextButton.startAnimation()
-                makeNetworkCall(phoneNumberEditText.text.toString())
-
+                makeNetworkCall(phoneNumberEditText.text.toString().trim().replace("\\s+",""))
 
             }
 

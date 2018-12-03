@@ -20,5 +20,8 @@
     <string name="phone_number_verification_prompt">Hey there, just make sure that these details are correct. For user authentication, a SMS with the verification code will be sent to your registered phone number, when you press the button.</string>
     <string name="hello_person"> Hello User </string>
     <string name="user_details">User Details</string>
+    <string name="verification_fatal_failure">Hello there! Looks like we\'ve encountered a serious network error. Please
+        restart the app and connect it to a stable internet connection.
+    </string>
 
 </resources>

@@ -7,16 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import nz.frequency.timesheet.util.Constants;
 import nz.frequency.timesheet.util.JobDetails;
 import nz.frequency.timesheet.util.UserDetails;
 import nz.frequency.timesheet.util.UserDetailsRVContent;
-import org.jetbrains.anko.ToastsKt;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -29,6 +28,8 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
 
     RecyclerView detailsRV;
     TextView helloUserTextView;
+    Button sendVerificationButton;
+    TextView verificationPromptTextView;
 
 
     @Override
@@ -38,6 +39,9 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
         setTitle(R.string.user_details);
         detailsRV = (RecyclerView) findViewById(R.id.detailsRV);
         helloUserTextView = (TextView) findViewById(R.id.hello_user_text);
+        sendVerificationButton = (Button) findViewById(R.id.button);
+        verificationPromptTextView = (TextView) findViewById(R.id.textView5);
+
 
     }
 
@@ -69,11 +73,21 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
              detailsRV.setAdapter(adapter);
             // Set layout manager to position the items
              detailsRV.setLayoutManager(new LinearLayoutManager(this));
+             //Retrofit might not be the best option.
+
+        }
+
+        else{
+            detailsRV.setVisibility(View.GONE);
+            verificationPromptTextView.setText(R.string.verification_fatal_failure);
+            //Cheers we've done the right thing
 
         }
 
 
     }
+
+
 
     //The method that parses the obtained user list and create a much better UI experience
     private List<Object> parseObtainedListInOrderAndSend(List<UserDetails> userDetailsList) {
@@ -93,9 +107,13 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
         for (String project : projectlist){
             theListOfObjects.add(new UserDetailsRVContent(project));
         }
-        //Configuring the heading
+
+
+        //Actually commenting code makes things better
         theListOfObjects.add("Contractor");
         //Getting the content.
+
+
         for (String contractor : contractorList){
             theListOfObjects.add(new UserDetailsRVContent(contractor));
         }
@@ -103,8 +121,14 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
         theListOfObjects.add("Jobs Assigned");
         //Getting the content.
         theListOfObjects.addAll(jobDetails);
+
         return theListOfObjects;
     }
+
+
+
+
+
 
 
     @Override
@@ -114,4 +138,5 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
         goHomeIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(goHomeIntent);
     }
+
 }
