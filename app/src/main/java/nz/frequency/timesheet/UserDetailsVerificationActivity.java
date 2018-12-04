@@ -38,7 +38,6 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
     TextView helloUserTextView;
     Button sendVerificationButton;
     TextView verificationPromptTextView;
-    public static final int MY_PERMISSIONS_REQUEST_RECEIVE_SMS = 5;
     public static final int MY_PERMISSIONS_REQUEST_READ_SMS = 3;
 
 
@@ -182,8 +181,8 @@ public class UserDetailsVerificationActivity extends AppCompatActivity {
         //Actually commenting code makes things better
         theListOfObjects.add("Contractor");
         //Getting the content.
-
-
+        //Commiting things up.
+        
         for (String contractor : contractorList){
             theListOfObjects.add(new UserDetailsRVContent(contractor));
         }

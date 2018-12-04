@@ -18,8 +18,7 @@ class Constants {
         const val GENERATE_WEB_TOKEN_PARAM_1 = "code"
         const val GENERATE_WEB_TOKEN_PARAM_2 = "phonenumber"
         const val GENERATE_WEB_TOKEN_ACCESS_CODE = "VyWAa62iWiPr7o3T1iKu4FDPsf6lKsVmdHb6fmA5yGX8IWDE36F3Cw=="
-        const val SINCH_APPLICATION_KEY = "d10cd53e-b8b0-401c-9e73-ee0ebf1371a1"
-
+        const val SINCH_APPLICATION_KEY = "a3697c15-e5ba-4794-948e-7b674688dbb6"
 
     }
 

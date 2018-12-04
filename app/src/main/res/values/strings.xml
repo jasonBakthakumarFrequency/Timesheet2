@@ -73,5 +73,8 @@
     <string name="fatal_error"> A fatal network error seems to have occurred. Please clear all of the app data or re install the app and please ensure that you have a stable internet connection while signing into the app for the first time.</string>
     <string name="sms_title_dialog">Permission</string>
     <string name="sms_description_dialog">In order to verify your phone number automatically we need your permission to receive and read the verification SMS that will be sent to you. Please press OK to navigate to the permissions dialog.</string>
+    <string name="verification_code">Code</string>
+    <string name="verify">Verify</string>
+    <string name="retry">Retry</string>
 
 </resources>
